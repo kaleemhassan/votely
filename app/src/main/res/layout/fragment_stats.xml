@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03755" />
+
+    <!-- Header with ECP Logo -->
+    <LinearLayout
+        android:id="@+id/menu_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/menu_header_container"
+        app:layout_constraintHeight_percent="0.0516"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/guideline_top">
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/nunitosans"
+            android:fontWeight="400"
+            android:text="ECP"
+            android:textColor="#D1232A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/election_commission_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:fontWeight="400"
+            android:text="Election Commission Pakistan"
+            android:textColor="#667085"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/headline_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/menu_header_container">
+
+        <TextView
+            android:id="@+id/Live_vote_results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#101828"
+            android:text="Live Vote Results"
+            android:textSize="20sp"
+            android:fontFamily="@font/nunito_sansbold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#344054"
+            android:text="Track the progress of the election."
+            android:textSize="14sp"
+            android:fontFamily="@font/nunitosansregular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.13145539906"
+        android:orientation="horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/headline_container">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_results_views" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Total Votes Cast"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:textColor="#344054"
+                android:fontFamily="@font/nunitosanssemibold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp">
+
+                <TextView
+                    android:id="@+id/total_votes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="30sp"
+                    android:text="950"
+                    android:gravity="start"
+                    android:textColor="#344054"
+                    android:fontFamily="@font/nunito_sansbold"
+                    android:drawableEnd="@drawable/icon_users"/>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_results_views"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/nunitosanssemibold"
+                android:text="Voting Progress"
+                android:textColor="#344054"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/voting_percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/progress_icon"
+                    android:fontFamily="@font/nunito_sansbold"
+                    android:gravity="start"
+                    android:text="65%"
+                    android:textColor="#344054"
+                    android:textSize="30sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/second_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.13145539906"
+        app:layout_constraintTop_toBottomOf="@id/first_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_results_views">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Time Remaining"
+                    android:textColor="#344054"
+                    android:textSize="12sp"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/nunitosanssemibold"
+                    app:drawableBottomCompat="@drawable/timer_icon" />
+
+            <LinearLayout
+                android:id="@+id/hours_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/hours_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="14"
+                    android:gravity="center_horizontal"
+                    android:textColor="#344054"
+                    android:textSize="36sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="26sp"
+                    android:autoSizeMaxTextSize="44sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:fontFamily="@font/nunito_sansbold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hours"
+                    android:textColor="#667085"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/nunitosansregular"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/minutes_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/minutes_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="27"
+                    android:textColor="#344054"
+                    android:gravity="center_horizontal"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="26sp"
+                    android:autoSizeMaxTextSize="44sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:textSize="36sp"
+                    android:fontFamily="@font/nunito_sansbold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Minutes"
+                    android:textColor="#667085"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/nunitosansregular"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/seconds_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/seconds_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="@font/nunito_sansbold"
+                    android:lineHeight="44dp"
+                    android:text="47"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="26sp"
+                    android:autoSizeMaxTextSize="44sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:textColor="#344054"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Seconds"
+                    android:textColor="#667085"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/nunitosansregular"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/second_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.44366197183"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_results_views">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Election Summary"
+                    android:layout_weight="1"
+                    android:textColor="#344054"
+                    android:fontFamily="@font/nunitosanssemibold" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/summary_icon"
+                    android:layout_gravity="end"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nominees_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:id="@+id/first_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_candidates_view"
+                    android:clipToPadding="false"
+                    android:clipChildren="false">
+
+                <View
+                    android:id="@+id/first_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="@drawable/progress_yellow_rounded"
+                    android:clipToOutline="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginStart="16dp"
+                        app:cardUseCompatPadding="false"
+                        app:cardPreventCornerOverlap="true">
+
+                        <ImageView
+                            android:id="@+id/winner_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_results_views"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/nominee1"
+                            android:adjustViewBounds="true" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/winner_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Imran Khan"
+                            android:textColor="#344054"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/nunito_sansbold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/winner_votes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="65"
+                                android:textColor="#667085"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nunitosansregular"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="votes"
+                                android:textColor="#667085"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nunitosansregular"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/winner_votes_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sansbold"
+                        android:text="65%"
+                        android:textColor="#344054"
+                        android:layout_marginEnd="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="24sp" />
+                </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/second_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_candidates_view"
+                    android:clipToPadding="false"
+                    android:clipChildren="false">
+
+                <View
+                    android:id="@+id/second_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="@drawable/progress_blue_rounded"
+                    android:clipToOutline="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginStart="16dp"
+                        app:cardUseCompatPadding="false"
+                        app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        android:id="@+id/secondpos_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_results_views"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/nominee2"
+                        android:adjustViewBounds="true" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/secondpos_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bilawal Bhutto"
+                            android:textColor="#344054"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/nunito_sansbold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/secondpos_votes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="21"
+                                android:textColor="#667085"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nunitosansregular"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="votes"
+                                android:textColor="#667085"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nunitosansregular"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/secondpos_votes_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sansbold"
+                        android:text="21%"
+                        android:textColor="#344054"
+                        android:layout_marginEnd="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="24sp" />
+                </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/third_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_candidates_view"
+                    android:clipToPadding="false"
+                    android:clipChildren="false">
+
+                <View
+                    android:id="@+id/third_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="@drawable/progress_blue_rounded"
+                    android:clipToOutline="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginStart="16dp"
+                        app:cardUseCompatPadding="false"
+                        app:cardPreventCornerOverlap="true">
+
+                        <ImageView
+                            android:id="@+id/thirdpos_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_results_views"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/nominee3"
+                            android:adjustViewBounds="true" />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/thirdpos_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nawaz Sharif"
+                            android:textColor="#344054"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/nunito_sansbold" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/thirdpos_votes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="14"
+                                android:textColor="#667085"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nunitosansregular"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="votes"
+                                android:textColor="#667085"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nunitosansregular"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/thirdpos_votes_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sansbold"
+                        android:text="14%"
+                        android:textColor="#344054"
+                        android:layout_marginEnd="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="24sp" />
+                </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refresh"
+                android:gravity="center_horizontal"
+                android:textColor="#1B92FF"
+                android:textSize="12sp"
+                android:fontFamily="@font/nunito_sansbold"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClickRefresh"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+

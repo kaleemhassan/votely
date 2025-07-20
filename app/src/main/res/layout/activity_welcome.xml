@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.306" />
+
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:fontFamily="@font/nunitosans"
+        app:layout_constraintWidth_percent="0.88"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/guideline_top_welcome"
+        app:layout_constraintHeight_min="30dp" />
+
+
+    <TextView
+        android:id="@+id/text_live_voting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:includeFontPadding="false"
+        android:lineHeight="60dp"
+        android:layout_marginEnd="24dp"
+        android:text="Ready to see live voting in action?"
+        android:textColor="#FFFFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintHeight_percent="0.215"
+        android:fontFamily="@font/nunito_sansbold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text" />
+
+
+    <LinearLayout
+        android:id="@+id/get_started_button_container"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/login_button_container"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintDimensionRatio="6.16:1"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_live_voting"
+        app:layout_constraintWidth_percent="0.88">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/letsBeginButton"
+            android:layout_height="56dp"
+            app:layout_constraintWidth_percent="0.88"
+            android:layout_width="match_parent"
+            android:textAppearance="?android:attr/textAppearance"
+            android:backgroundTint="@color/color_stroke_focused"
+            android:fontFamily="@font/nunito_sansbold"
+            android:gravity="center"
+            android:text="Get Started"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

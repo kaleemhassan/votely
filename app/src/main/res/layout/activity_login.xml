@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03755" />
+
+    <!-- Header with ECP Logo -->
+    <LinearLayout
+        android:id="@+id/menu_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/menu_header_container"
+        app:layout_constraintHeight_percent="0.0516"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/guideline_top">
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/nunitosans"
+            android:fontWeight="400"
+            android:text="ECP"
+            android:textColor="#D1232A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/election_commission_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:fontWeight="400"
+            android:text="Election Commission Pakistan"
+            android:textColor="#667085"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/headline_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/inputs_container"
+        app:layout_constraintHeight_percent="0.1877"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/menu_header_container">
+
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="20sp"
+            android:autoSizeMaxTextSize="32sp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="0.5714"
+            android:fontFamily="@font/nunito_sansbold"
+            android:gravity="left"
+            android:lineHeight="32dp"
+            android:maxLines="2"
+            android:text="Welcome Votely Member!\nLet's get you set up to vote."
+            android:textColor="#161616"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/login_description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.42857"
+            android:layout_marginTop="-12dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:autoSizeTextType="uniform"
+            android:fontWeight="400"
+            android:maxLines="2"
+            android:text="Enter your Email address and password to access\nyour ballot."
+            android:textColor="#667085"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputs_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2694109014084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headline_container">
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:fontFamily="@font/nunito_sansbold"
+            android:fontWeight="700"
+            android:text="Email address"
+            android:textColor="#344054"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_weight="0.29166666666"
+            android:layout_height="0dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/text_input_stroke_colors"
+            app:boxStrokeErrorColor="@color/color_stroke_error"
+            app:boxStrokeWidth="1dp"
+            app:hintEnabled="false"
+            app:shapeAppearanceOverlay="@style/RoundedCornerTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunitosansregular"
+                android:hint="example@gmail.com"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textColor="#101828"
+                android:textColorHint="#667085"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/email_error_text"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:fontWeight="400"
+            android:text=""
+            android:textColor="#FF0000"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:fontFamily="@font/nunito_sansbold"
+            android:fontWeight="400"
+            android:text="Password"
+            android:textColor="#344054"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.29166666666"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/text_input_stroke_colors"
+            app:boxStrokeErrorColor="@color/color_stroke_error"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
+            app:shapeAppearanceOverlay="@style/RoundedCornerTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunitosansregular"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textColor="#101828"
+                android:textColorHint="#667085"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/password_error_text"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:fontWeight="400"
+            android:text=""
+            android:textColor="#FF0000"
+            android:textSize="12sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!-- Login Button -->
+
+    <!-- SignUp Link -->
+    <LinearLayout
+        android:id="@+id/login_button_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/login_button_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8167"
+        app:layout_constraintHeight_percent="0.06572">
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="?attr/selectableItemBackground"
+            android:fontFamily="@font/nunito_sansbold"
+            android:gravity="center"
+            android:text="Log In"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signup_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nunito_sansbold"
+        android:onClick="onSignUpClick"
+        android:text="Don’t have account Signup here"
+        android:textColor="#344054"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_button_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

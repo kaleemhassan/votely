@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03755" />
+
+    <!-- Header with ECP Logo -->
+    <LinearLayout
+        android:id="@+id/menu_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/menu_header_container"
+        app:layout_constraintHeight_percent="0.0516"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/guideline_top">
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/nunitosans"
+            android:fontWeight="400"
+            android:text="ECP"
+            android:textColor="#D1232A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/election_commission_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:fontWeight="400"
+            android:text="Election Commission Pakistan"
+            android:textColor="#667085"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/headline_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintHeight_percent="0.1784"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/menu_header_container">
+
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/nunito_sansbold"
+            android:gravity="left"
+            android:lineHeight="32dp"
+            android:maxLines="2"
+            android:text="It's time to cast your vote!"
+            android:textColor="#161616"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/login_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/nunitosansregular"
+            android:autoSizeTextType="uniform"
+            android:fontWeight="400"
+            android:maxLines="2"
+            android:text="Select your candidate who will represent you in the National Assembly of Pakistan."
+            android:textColor="#667085"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/voting_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintHeight_percent="0.4631"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/headline_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_nominee_1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="0.5dp"
+            app:strokeColor="@color/color_stroke_default">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Image with gradient -->
+                <FrameLayout
+                    android:id="@+id/nominee1_image_frame"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/gradient_silver_fade">
+
+                    <ImageView
+                        android:id="@+id/nominee1_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:src="@drawable/nominee1" />
+                </FrameLayout>
+
+                <!-- Text + Button -->
+                <LinearLayout
+                    android:id="@+id/nominee1_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="140dp"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/nominee1_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Imran Khan"
+                        android:textSize="18sp"
+                        android:textColor="#101828"
+                        android:fontFamily="@font/nunito_sansbold" />
+
+                    <TextView
+                        android:id="@+id/nominee1_party"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pakistan Tehreek-e-Insaf"
+                        android:textSize="14sp"
+                        android:textColor="#667085"
+                        android:fontFamily="@font/nunitosansregular" />
+
+
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rounded_icon_button1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/voting_rounded_button_selector"
+                    android:checkable="true"
+                    android:checked="false"
+                    android:text=""
+                    android:gravity="center"
+                    android:contentDescription="Select Option 1"
+                    app:backgroundTint="@null" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Nominee 2 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_nominee_2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="0.5dp"
+            app:strokeColor="@color/color_stroke_default">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/nominee2_image_frame"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/gradient_silver_fade">
+
+                    <ImageView
+                        android:id="@+id/nominee2_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:src="@drawable/nominee2" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/nominee2_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="140dp"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/nominee2_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bilawal Bhutto"
+                        android:textSize="18sp"
+                        android:textColor="#101828"
+                        android:fontFamily="@font/nunito_sansbold" />
+
+                    <TextView
+                        android:id="@+id/nominee2_party"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pakistan Peoples Party"
+                        android:textSize="14sp"
+                        android:textColor="#667085"
+                        android:fontFamily="@font/nunitosansregular" />
+
+
+                </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rounded_icon_button2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/voting_rounded_button_selector"
+                    android:checkable="true"
+                    android:checked="false"
+                    android:text=""
+                    android:gravity="center"
+                    android:contentDescription="Select Option 1"
+                    app:backgroundTint="@null" />
+
+                 </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Nominee 3 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_nominee_3"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="0.5dp"
+            app:strokeColor="@color/color_stroke_default">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/nominee3_image_frame"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/gradient_silver_fade">
+
+                    <ImageView
+                        android:id="@+id/nominee3_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToOutline="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/nominee3" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/nominee3_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="140dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nominee3_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sansbold"
+                        android:text="Nawaz Sharif"
+                        android:textColor="#101828"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/nominee3_party"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitosansregular"
+                        android:text="Pakistan Muslim League N"
+                        android:textColor="#667085"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rounded_icon_button3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/voting_rounded_button_selector"
+                    android:checkable="true"
+                    android:checked="false"
+                    android:text=""
+                    android:gravity="center"
+                    android:contentDescription="Select Option 1"
+                    app:backgroundTint="@null" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:cornerRadius="40dp"
+        app:layout_constraintHeight_percent="0.0736572"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/color_stroke_focused"
+        android:text="Next"
+        android:fontFamily="@font/nunito_sansbold"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        app:layout_constraintTop_toBottomOf="@id/voting_container"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:text="Your vote is confidential and secure."
+        android:textColor="#667085"
+        android:fontFamily="@font/nunitosansregular"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/next_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

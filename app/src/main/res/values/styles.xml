@@ -1,0 +1,31 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/color_stroke_focused</item>
+        <!-- Customize TextInputLayout colors -->
+        <item name="colorError">@color/color_stroke_error</item>
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox
+        </item>
+        <item name="textInputOutlinedStyle">@style/RoundedCornerTextInputLayout</item>
+    </style>
+
+    <!-- Custom style for TextInputLayout with 16dp corner radius -->
+    <style name="RoundedCornerTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+        <!-- Use ColorStateList for stroke color -->
+        <item name="boxStrokeColor">@color/text_input_stroke_colors</item>
+        <item name="boxStrokeWidth">1dp</item> <!-- Ensure stroke is visible -->
+        <item name="boxBackgroundColor">@android:color/transparent
+        </item> <!-- Explicitly set transparent background -->
+        <item name="boxBackgroundMode">outline</item> <!-- Reinforce outline mode -->
+    </style>
+
+    <style name="Widget.AppTheme.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>
