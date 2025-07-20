@@ -32,16 +32,17 @@ This project was developed as a final year project to simulate a real-world digi
 
 
 - **Home Screen**  
-  ![](screenshots/home.png)
+  <img src="screenshots/home.png" alt="Home Screen" width="300"/>
 
 - **Voting Screen**  
-  ![](screenshots/voting.png)
+  <img src="screenshots/voting.png" alt="Voting Screen" width="300"/>
 
 - **Vote Confirmation Overlay**  
-  ![](screenshots/confirmvote.png)
+  <img src="screenshots/confirmvote.png" alt="Vote Confirmation" width="300"/>
 
 - **Stats Screen**  
-  ![](screenshots/stats.png)
+  <img src="screenshots/stats.png" alt="Stats Screen" width="300"/>
+
 
 ---
 
