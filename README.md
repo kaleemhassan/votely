@@ -3,7 +3,7 @@
 ![Platform](https://img.shields.io/badge/platform-Android-blue.svg)
 ![Tech](https://img.shields.io/badge/tech-Firebase-orange)
 ![Status](https://img.shields.io/badge/status-Completed-brightgreen)
-[![LinkedIn – Kaleem Hassan](https://img.shields.io/badge/LinkedIn-Kaleem%20Hassan-blue?logo=linkedin)](https://www.linkedin.com/in/kaleem-hassan)
+[![LinkedIn – Kaleem Hassan](https://img.shields.io/badge/LinkedIn-Kaleem%20Hassan-blue?logo=linkedin)](https://www.linkedin.com/in/kaleem-hassan-61369a214)
 [![GitHub](https://img.shields.io/github/stars/kaleemhassan/votely?style=social)](https://github.com/kaleemhassan/votely)
 
 ---
@@ -30,7 +30,6 @@ This project was developed as a final year project to simulate a real-world digi
 
 ## 📷 Screenshots
 
-> Save images in `screenshots/` folder and update links below
 
 - **Home Screen**  
   ![](screenshots/home.png)
@@ -72,24 +71,7 @@ Sync Gradle.
 
 Run the app on an emulator or real device.
 
-📂 Project Structure
-Copy
-Edit
-com.example.votely/
-├── activities/
-│   ├── LoginActivity.java
-│   ├── SignupActivity.java
-│   ├── OtpAuthenticationActivity.java
-├── fragments/
-│   ├── HomeFragment.java
-│   ├── VotingFragment.java
-│   ├── StatsFragment.java
-│   ├── ProfileFragment.java
-│   └── ConfirmVoteFragment.java
-├── models/
-│   └── Candidate.java
-├── utils/
-│   └── TimerUtils.java
+
 
 This app was developed as part of our academic project.
 
