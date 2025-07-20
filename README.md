@@ -38,7 +38,7 @@ This project was developed as a final year project to simulate a real-world digi
   ![](screenshots/voting.png)
 
 - **Vote Confirmation Overlay**  
-  ![](screenshots/confirm_vote.png)
+  ![](screenshots/confirmvote.png)
 
 - **Stats Screen**  
   ![](screenshots/stats.png)
