@@ -63,19 +63,18 @@ This project was developed as a final year project to simulate a real-world digi
    ```bash
    git clone https://github.com/kaleemhassan/votely.git
    
-Open the project in Android Studio.
+2. Open the project in Android Studio.
 
-Add your own google-services.json file inside the app/ directory.
+3. Add your own google-services.json file inside the app/ directory.
 
-Sync Gradle.
+4. Sync Gradle.
 
-Run the app on an emulator or real device.
+5. Run the app on an emulator or real device.
 
 
 
 This app was developed as part of our academic project.
 
-
 🤝 Connect With Me
 
-📫 Email: kaleemhassan.dev@gmail.com
+📫 Email: kaleemhassanofficial@gmail.com
